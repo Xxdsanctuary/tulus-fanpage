@@ -16,6 +16,14 @@ footer {
   border: 1; /* placeholder */
 }
 
+.nasi-goreng {
+  font-style: italic; /* placeholder */
+}
+
+#nasi-goreng {
+  font-style: italic; /* placeholder */
+}
+
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
