@@ -7,3 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('active');
   });
 });
+
+function scrollById(target) {
+  return document.getElementById(`${target}`).scrollIntoView();
+}
