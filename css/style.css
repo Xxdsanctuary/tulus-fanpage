@@ -12,16 +12,120 @@ header {
   border: 1; /* placeholder */
 }
 
+section {
+  background-color: aqua;
+}
+
 footer {
   border: 1; /* placeholder */
 }
 
-.nasi-goreng {
-  font-style: italic; /* placeholder */
+/* Add this to enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  /* Prevents the fixed navbar from overlapping section titles when scrolling */
+  scroll-padding-top: 70px; 
 }
 
-#nasi-goreng {
-  font-style: italic; /* placeholder */
+/* Update your navbar class to stay fixed at the top */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't push it off-screen */
+  
+  /* New properties for fixed navigation */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 2. Style the Anchor Links */
+/* 1. Style the List Container (Forces the row) */
+ul.nav-links {
+  display: flex;
+  flex-direction: row; 
+  list-style: none; /* Removes any remaining bullet points */
+  gap: 2rem;        /* Adds space between the links */
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Style the Anchor Links */
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a0a0a0;         
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Add some padding to main so content isn't hidden under the navbar */
+main {
+  margin-top: 70px; 
+}
+
+/* Just to make the sections tall enough to see the scrolling effect */
+section {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  gap: 4px;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+  }
+
+  /* Class added via JavaScript to show the menu */
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 @font-face {
