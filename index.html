@@ -8,15 +8,17 @@
     <title>Tulus Fanpage</title>
 </head>
 <body>
-    
+    <!-- floating objects -->
+    <div id="floating-objects" aria-hidden="true"></div>
+
     <header class="osu-navbar">
         <nav class="navbar-content">
             <div class="navbar-left">
                 <button class="nav-btn" title="Home" onclick="scrollById('front-view')">
                     <div class="nav-text">Home</div>
                 </button>
-                <button class="nav-btn" title="Play" onclick="scrollById('featured-song')">
-                    <div class="nav-text">Featured Songs</div>
+                <button class="nav-btn" title="Play" onclick="scrollById('small-biography')">
+                    <div class="nav-text">Biography</div>
                 </button>
             </div>
             
@@ -25,58 +27,178 @@
             </div>
             
             <div class="navbar-right">
-                <button class="nav-btn" title="Settings" onclick="scrollById('featured-play')">
-                    <div class="nav-text">Play Songs</div>
+                <button class="nav-btn" title="Settings" onclick="scrollById('featured-song')">
+                    <div class="nav-text">Featured Songs</div>
                 </button>
-                <button class="nav-btn" title="Profile" onclick="scrollById('small-biography')">
-                    <div class="nav-text">Biography</div>
+                <button class="nav-btn" title="Profile" onclick="scrollById('featured-play')">
+                    <div class="nav-text">Play Songs</div>
                 </button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="front-view">
-            <h1 class="">Tulus</h1>
-            <div class="profile-container">
-                <a href="https://www.situstulus.com/">
-                    <img src="assets/images/tulus-mood-profile.jpg" alt="Tulus Profile" class="profile-picture" >
-                </a>
+        <section id="front-view" class="artist-section">
+            <div class="title-capsule">
+                <span class="title-decoration">—</span>
+                <h1 class="title">TULUS</h1>
+                <span class="title-decoration">—</span>
             </div>
-            <div class="capsule-container">
-                <div class="welcome-text">Welcome to Tulus fanpage site, feel free to make yourself at home!</div>
+
+            <div class="profile-layout">
+
+                <!-- Left information box -->
+                <div class="info-column">
+                    <div class="info-box">
+                        <h2>About</h2>
+                        <p>Indonesian singer and songwriter.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h2>Genre</h2>
+                        <p>Pop, soul, and jazz.</p>
+                    </div>
+                </div>
+
+                <!-- Middle Profile Image -->
+                <div class="profile-container">
+                    <a href="https://www.situstulus.com/">
+                        <img 
+                            src="assets/images/tulus-mood-profile.jpg" 
+                            alt="Tulus Profile" 
+                            class="profile-picture" 
+                            id="profile-picture"
+                        >
+                    </a>
+                </div>
+
+                <!-- Right information box -->
+                <div class="info-column">
+                    <div class="info-box">
+                        <h2>Country</h2>
+                        <p>Indonesia</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h2>Born</h2>
+                        <p>Bukittinggi, West Sumatra</p>
+                        <p>August 20th, 1987</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <section id="small-biography" class="biography-section">
+            <h2 class="biography-title">Short Biography</h2>
+
+            <div class="biography-grid">
+                <article class="biography-card">
+                    <h3>Introduction</h3>
+                    <p>
+                        Tulus is an Indonesian singer and songwriter known for his
+                        warm vocals, thoughtful lyrics, and elegant musical style.
+                    </p>
+                </article>
+
+                <article class="biography-card">
+                    <h3>Musical Debut</h3>
+                    <p>
+                        He began his professional music career with his self-titled
+                        debut album Tulus, released in 2011.
+                    </p>
+                </article>
+
+                <article class="biography-card">
+                    <h3>Independent Career</h3>
+                    <p>
+                        Tulus developed his career independently through his own
+                        music label and creative direction, TulusCompany.
+                    </p>
+                </article>
+
+                <article class="biography-card">
+                    <h3>Musical Style</h3>
+                    <p>
+                        His music combines pop, soul, and jazz influences with
+                        personal storytelling and poetic lyrics.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="fun-facts" aria-labelledby="fun-facts-title">
+            <h2 id="fun-facts-title">Fun Facts!</h2>
+
+            <div class="fun-fact-box">
+                <p id="tulusFact">
+                    Click the button to discover a fun fact about Tulus.
+                </p>
+
+                <button id="newFactBtn" type="button">
+                    Show a Fun Fact
+                </button>
+            </div>
+        </section>
+
+        <!-- <div class="capsule-container">
+            <div class="welcome-text">Welcome to Tulus fanpage site, feel free to make yourself at home!</div>
+        </div> -->
+
         <section id="featured-song">
-            <h2>Featured songs!</h2>
+            <h2 class="biography-title">Featured Songs!</h2>
+            <img src="assets/icons/spotify-logo.png" alt="Spotify Logo" class="spotify-logo">
             <div class="album-grid">
                 <article class="album-card">
-                    <img src="images/monokrom.jpg" alt="Monokrom album cover">
+                    <a href="https://open.spotify.com/track/4GfK1qOF3uBWidbPlTCQRL?si=349bcfb4b5f24ed6">
+                        <img 
+                            src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0271c65edbeed32af70b900637" 
+                            alt="Monokrom album cover"
+                        >
+                    </a>
                     <h3>Monokrom</h3>
                     <p>Tulus</p>
                 </article>
 
                 <article class="album-card">
-                    <img src="images/hati-hati-di-jalan.jpg" alt="Hati-Hati di Jalan album cover">
+                    <a href="https://open.spotify.com/track/2hHeGD57S0BcopfVcmehdl?si=712d58ac0cbd44e7">
+                        <img 
+                            src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d34a0632f6861e8875d6899b" 
+                            alt="Hati-Hati di Jalan album cover"
+                        >
+                    </a>
                     <h3>Hati-Hati di Jalan</h3>
                     <p>Tulus</p>
                 </article>
 
                 <article class="album-card">
-                    <img src="images/interaksi.jpg" alt="Interaksi album cover">
+                    <a href="https://open.spotify.com/track/32Pdf9eyXDEMoClEJW6yYP?si=e34b6d0a26454bc0">
+                        <img 
+                            src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d34a0632f6861e8875d6899b" 
+                            alt="Interaksi album cover"
+                        >
+                    </a>
                     <h3>Interaksi</h3>
                     <p>Tulus</p>
                 </article>
 
                 <article class="album-card">
-                    <img src="images/jatuh-suka.jpg" alt="Jatuh Suka album cover">
+                    <a href="https://open.spotify.com/track/6PqWdGIYq5xdLaa4zCZfRp?si=c3c164af26a4436e">
+                        <img 
+                            src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d34a0632f6861e8875d6899b" 
+                            alt="Jatuh Suka album cover"
+                        >
+                    </a>
                     <h3>Jatuh Suka</h3>
                     <p>Tulus</p>
                 </article>
 
                 <article class="album-card">
-                    <img src="images/teh-hijau.jpg" alt="Teh Hijau album cover">
+                    <a href="https://open.spotify.com/track/4R9G7azXaZe93KTX65P9fU?si=f46b5370d51e4e74">
+                        <img 
+                            src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02e4086e5f9d79cf18ed601015" 
+                            alt="Teh Hijau album cover"
+                        >
+                    </a>
                     <h3>Teh Hijau</h3>
                     <p>Tulus</p>
                 </article>
@@ -84,56 +206,98 @@
         </section>
 
         <section id="featured-play">
-            <h4>Check out these songs on Spotify!</h4>
-            <div class="spotify-player">
+            <h2 class="biography-title">Check Out These Songs on Spotify!</h2>
+            <div class="song-list">
+                <div class="song-card">
+                    <iframe 
+                        data-testid="embed-iframe" 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/0nXXgjpcisM0bheuDZHAub?utm_source=generator&si=caa99f72edd54363" 
+                        width="75%" 
+                        height="200" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="autoplay-featured">Sewindu by Tulus (Tulus 2011)</div>
+                </div>
+                <div class="song-card">
+                    <iframe 
+                        data-testid="embed-iframe" 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/5VAGZmCKBxYT85w51gNy27?utm_source=generator&si=37fe3ec2208b45ee" 
+                        width="75%" 
+                        height="200" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="autoplay-featured">Tukar Jiwa by Tulus (Monokrom 2016)</div>
+                </div>
+            </div>
+            <div class="song-card">
                 <iframe 
                     data-testid="embed-iframe" 
                     style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/0nXXgjpcisM0bheuDZHAub?utm_source=generator&si=caa99f72edd54363" 
-                    width="50%" 
-                    height="200" 
+                    src="https://open.spotify.com/embed/album/0d5mFusjnb62TQWBft3zc6?utm_source=generator&si=ebd07dbe87ea4721" 
+                    width="75%" 
+                    height="670" 
                     frameBorder="0" 
                     allowfullscreen="" 
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                     loading="lazy">
                 </iframe>
-            </div>
-            <div class="autoplay-featured-1">Sewindu by Tulus (Tulus 2011)</div>
-            <div class="spotify-player">
-                <iframe 
-                    data-testid="embed-iframe" 
-                    style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/5VAGZmCKBxYT85w51gNy27?utm_source=generator&si=37fe3ec2208b45ee" 
-                    width="50%" 
-                    height="200" 
-                    frameBorder="0" 
-                    allowfullscreen="" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                </iframe>
-            </div>
-            <div class="autoplay-featured-2">Tukar Jiwa by Tulus (Monokrom 2016)</div>
-        </section>
-
-        <section id="small-biography">
-            <h4>Short Biography</h4>
-            <div class="biography-intro">
-                
-            </div>
-            <div class="biography-debut">
-
-            </div>
-            <div class="biography-company">
-
-            </div>
-            <div class="biography-others">
-
+                <div class="autoplay-featured">Album: Gajah by Tulus (2014)</div>
             </div>
         </section>
     </main>
 
-    <footer>
-        
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h2>TULUS</h2>
+                <p>
+                    Ruang sederhana untuk mengenal karya,<br>
+                    cerita, dan musik Tulus.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="#front-view">Home</a>
+                <a href="#small-biography">Biography</a>
+                <a href="#featured-song">Featured Songs</a>
+                <a href="#play-song">Play Songs</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <a href="https://www.situstulus.com/" target="_blank" rel="noopener">
+                    Official Website
+                </a>
+                <a href="https://www.instagram.com/tulusm/" target="_blank" rel="noopener">
+                    Instagram
+                </a>
+                <a href="https://www.youtube.com/@MusikTulus" target="_blank" rel="noopener">
+                    YouTube
+                </a>
+                <a href="https://open.spotify.com/artist/2iDVt6mFbtbDEZG5ax0dTi?si=1CdtrcabRmSP2tgAYlHDCA" target="_blank" rel="noopener">
+                    Spotify
+                </a>
+            </div>
+
+            <div class="footer-note">
+                <span class="music-symbol">♪</span>
+                <p>“Musik yang menemani<br>setiap perjalanan.”</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Tulus Fanpage</p>
+            <p>Fan-made website · Not an official website</p>
+        </div>
     </footer>
 
     <script src="js/app.js"></script>
